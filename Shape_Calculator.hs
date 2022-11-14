@@ -32,12 +32,6 @@ area (Cylinder _ r h) = 2*constPi*r*(r+h)
 area (Cube _ l) = 6*l*l
 area (Cuboid _ l w h) = 2*(l*w + l*h + w*h)
 
-addCubeCorner:: Point -> Double -> Double -> [Point]
-addCubeCorner point 0 _ = [point]
-addCubeCorner (Point x y z) 1 l = [Point (x + l) y z, Point x (y+l) z, Point x y (z+l)]
-addCubeCorner (Point x y z) 2 l = [Point (x + l) (y+l) z, Point x (y+l) (z+l), Point (x+l) y (z+l)]
-addCubeCorner (Point x y z) 3 l = [Point (x + l) (y+l) (z+l)]
-
 addCuboidCorner:: Point -> Double -> Double -> Double -> Double -> [Point]
 addCuboidCorner point 0 _ _ _ = [point]
 addCuboidCorner (Point x y z) 1 l w h = [Point (x + l) y z, Point x (y+w) z, Point x y (z+h)]
