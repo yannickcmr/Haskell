@@ -1,4 +1,3 @@
-import Distribution.FieldGrammar (List)
 constPi :: Double
 constPi = 3.141592
 
